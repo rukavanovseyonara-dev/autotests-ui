@@ -6,7 +6,7 @@ def log_request(request: Request):
 
 
 def log_response(response: Response):
-    print(f'Response: {response.url}')
+    print(f'Response: {response.url}, {response.status}')
 
 with sync_playwright() as playwright:
     browser = playwright.chromium.launch(headless=False)
@@ -17,4 +17,4 @@ with sync_playwright() as playwright:
     page.on('request', log_request)
     page.on('response', log_response)
 
-    page.wait_for_timeout(500)
+    page.wait_for_timeout(5000)
