@@ -30,16 +30,18 @@ with sync_playwright() as playwright:
 
     courses_drawer = page.get_by_test_id('courses-list-toolbar-title-text')
     expect(courses_drawer).to_be_visible()
+    expect(courses_drawer).to_have_text('Courses')
 
     view_title = page.get_by_test_id('courses-list-empty-view-title-text')
     expect(view_title).to_be_visible()
+    expect(view_title).to_have_text('There is no results')
 
     view_icon = page.get_by_test_id('courses-list-empty-view-icon')
     expect(view_icon).to_be_visible()
 
     view_text = page.get_by_test_id('courses-list-empty-view-description-text')
     expect(view_text).to_be_visible()
-
+    expect(view_text).to_have_text('Results from the load test pipeline will be displayed here')
 
 
     page.wait_for_timeout(5000)
