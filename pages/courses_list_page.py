@@ -10,7 +10,7 @@ class CoursesListPage(BasePage):
         self.create_course_button = page.get_by_test_id('courses-list-toolbar-create-course-button')
 
 
-        self.courses_title = page.get_by_test_id('course-widget-title-text')
+        self.course_title = page.get_by_test_id('course-widget-title-text')
         self.course_image = page.get_by_test_id('course-preview-image')
         self.course_max_score_text = page.get_by_test_id('course-max-score-info-row-view-text')
         self.course_min_score_text = page.get_by_test_id('course-min-score-info-row-view-text')
@@ -55,14 +55,14 @@ class CoursesListPage(BasePage):
     ):
         expect(self.course_image.nth(index)).to_be_visible()
 
-        expect(self.courses_title.nth(index)).to_be_visible()
-        expect(self.courses_title.nth(index)).to_have_text(title)
+        expect(self.course_title.nth(index)).to_be_visible()
+        expect(self.course_title.nth(index)).to_have_text(title)
 
         expect(self.course_max_score_text.nth(index)).to_be_visible()
-        expect(self.course_max_score_text.nth(index)).to_have_text(f'max_score: {max_score}')
+        expect(self.course_max_score_text.nth(index)).to_have_text(f'Max score: {max_score}')
 
         expect(self.course_min_score_text.nth(index)).to_be_visible()
-        expect(self.course_min_score_text.nth(index)).to_have_text(f'min_score: {min_score}')
+        expect(self.course_min_score_text.nth(index)).to_have_text(f'Min score: {min_score}')
 
         expect(self.course_estimated_time.nth(index)).to_be_visible()
         expect(self.course_estimated_time.nth(index)).to_have_text(f'Estimated time: {estimated_time}')
