@@ -1,5 +1,5 @@
 from components.base_component import BaseComponent
-from playwright.sync_api import Page, expect
+from playwright.sync_api import Page, Playwright, expect
 
 class EmptyViewComponent(BaseComponent):
     def __init__(self, page: Page, identifier: str):
@@ -17,7 +17,6 @@ class EmptyViewComponent(BaseComponent):
 
         expect(self.description).to_be_visible()
         expect(self.description).to_have_text(description)
-
 
 
 
