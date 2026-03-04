@@ -1,5 +1,3 @@
-from charset_normalizer.utils import identify_sig_or_bom
-
 from components.courses.course_view_component import CoursesViewComponent
 from components.courses.courses_list_toolbar_view_component import CoursesListToolbarViewComponent
 from components.navigation.navbar_component import NavbarComponent

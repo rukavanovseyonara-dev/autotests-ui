@@ -1,4 +1,3 @@
-from components.courses.course_view_component import CoursesViewComponent
 from components.courses.create_course_exercise_form_component import CreateCourseExerciseFormComponent
 from components.courses.create_course_form_component import CreateCourseFormComponent
 from components.courses.create_course_toolbar_view_component import CreateCourseExercisesToolbarViewComponent

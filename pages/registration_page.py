@@ -1,6 +1,5 @@
 from playwright.sync_api import Page, expect
 from components.authentication.registration_form_component import RegistrationFormComponent
-
 from pages.base_page import BasePage
 
 
