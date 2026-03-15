@@ -9,7 +9,8 @@ def test_dashboard_displaying(dashboard_page_with_state: DashboardPage):
     dashboard_page_with_state.sidebar.check_visible()
 
     dashboard_page_with_state.dashboard_toolbar_view.check_visible_dashboard_title()
-    dashboard_page_with_state.students_chart_view.check_visible()
-    dashboard_page_with_state.activities_chart_view.check_visible()
-    dashboard_page_with_state.courses_chart_view.check_visible()
-    dashboard_page_with_state.scores_chart_view.check_visible()
+
+    dashboard_page_with_state.students_chart_view.check_visible("Students")
+    dashboard_page_with_state.activities_chart_view.check_visible("Activities")
+    dashboard_page_with_state.courses_chart_view.check_visible("Courses")
+    dashboard_page_with_state.scores_chart_view.check_visible("Scores")
