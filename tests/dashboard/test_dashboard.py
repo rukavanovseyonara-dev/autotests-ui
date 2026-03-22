@@ -14,6 +14,9 @@ from tools.allure.stories import AllureStory
 @allure.epic(AllureEpics.LMS)
 @allure.feature(AllureFeature.DASHBOARD)
 @allure.story(AllureStory.DASHBOARD)
+@allure.parent_suite(AllureEpics.LMS)
+@allure.suite(AllureFeature.DASHBOARD)
+@allure.sub_suite(AllureStory.DASHBOARD)
 class TestDashboard:
     @allure.title('Check displaying of dashboard page')
     @allure.severity(Severity.NORMAL)
