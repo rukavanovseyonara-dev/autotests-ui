@@ -1,4 +1,4 @@
-from playwright.sync_api import Page, expect
+from playwright.sync_api import Page
 import re, allure
 from components.base_component import BaseComponent
 
