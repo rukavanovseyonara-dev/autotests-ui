@@ -14,10 +14,10 @@ jobs:
 
     steps:
       - name: Check out repository
-        uses: Actions/checkout@v3
+        uses: actions/checkout@v3
 
       - name: Set up Python
-        uses: Actions/setup-python@v4
+        uses: actions/setup-python@v4
         with:
           python-version: '3.11'
 
@@ -32,7 +32,7 @@ jobs:
           pytest -m regression --alluredir=./allure-results --numprocesses 2
 
       - name: Get Allure history
-        uses: Actions/checkout@v3
+        uses: actions/checkout@v3
         if: always()
         continue-on-error: true
         with:
